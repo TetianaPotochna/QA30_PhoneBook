@@ -50,6 +50,7 @@ public class LoginTests extends TestBase {
         app.getHelperUser().submitLogin();
     }
     @Test
+
     public void loginWrongUnregisteredUser(){
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("dusm13@gmail.com", "Tt123456$");
