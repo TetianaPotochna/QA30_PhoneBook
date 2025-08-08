@@ -42,12 +42,14 @@ public class LoginTests extends TestBase {
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("dusm6gmail.com", "Tt123456$");
         app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
     }
     @Test
     public void loginWrongPassword(){
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("dusm6@gmail.com", "Tt12$");
         app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
     }
     @Test
 
@@ -55,5 +57,6 @@ public class LoginTests extends TestBase {
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("dusm13@gmail.com", "Tt123456$");
         app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
     }
 }
