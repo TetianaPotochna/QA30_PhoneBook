@@ -10,7 +10,6 @@ import java.util.Random;
 public class RegistrationTests extends TestBase {
     @BeforeMethod
     public void preCondition() {
-        //if SignOut present ---> Logout
         if (app.getHelperUser().isLogged()) {
             app.getHelperUser().logout();
         }
@@ -18,24 +17,25 @@ public class RegistrationTests extends TestBase {
 
     @Test
     public void registrationSuccess() {
-        Random random = new Random();
-        int i = random.nextInt(1000);
-        System.out.println(i);
-        System.out.println(System.currentTimeMillis());
+//        Random random = new Random();
+//        int i = random.nextInt(1000);
+//        System.out.println(i);
+ //       System.out.println(System.currentTimeMillis());
         int r = (int) ((System.currentTimeMillis() / 1000) % 3600);
 
-        User user = new User()
-                .setEmail("dusm" + r + "@gmail.com")
-                .setPassword("Tt123456$");
+        User user = new User().setEmail("dusm" + r + "@gmail.com").setPassword("Tt123456$");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
         Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isNoContactsHere());
+
     }
 
     //NEGATIVE TESTS
-@Test
+@Test(description = "Bug report #2365")
     public void registrationEmptyEmail(){
     User user = new User()
             .setEmail("")
