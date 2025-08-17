@@ -1,0 +1,20 @@
+19:16:40.849 INFO  manager.ApplicationManager -- All tesys runs in Chrome Browser
+19:16:41.332 INFO  manager.ApplicationManager -- The link--->https://telranedu.web.app/home
+19:16:41.349 INFO  tests.TestBase -- Name of method-->loginSuccess
+19:16:46.397 INFO  tests.TestBase -- Start test with name 'loginsuccess'
+19:16:46.397 INFO  tests.TestBase -- Test data ---> email: 'dusm6@gmail.com' & password 'Tt123456$'
+19:16:47.649 INFO  tests.TestBase -- Assert check is Element 'Sign out' present
+19:16:47.656 INFO  tests.TestBase -- Name of method-->loginSuccessModel
+19:16:47.706 INFO  tests.TestBase -- Before method finished logout
+19:16:47.707 INFO  tests.TestBase -- Test data ---> email: 'dusm6@gmail.com' & password 'Tt123456$'
+19:16:48.281 INFO  tests.TestBase -- Name of method-->loginSuccessUser
+19:16:48.332 INFO  tests.TestBase -- Before method finished logout
+19:16:48.332 INFO  tests.TestBase -- Test data ---> email: 'dusm6@gmail.com' & password 'Tt123456$'
+19:16:48.919 INFO  tests.TestBase -- Assert check is Element 'Sign out' present
+19:16:48.919 INFO  tests.TestBase -- Name of method-->loginWrongEmail
+19:16:48.991 INFO  tests.TestBase -- Before method finished logout
+19:16:48.991 INFO  tests.TestBase -- Test data ---> email: 'dusm6gmail.com' & password 'Tt123456$'
+19:16:49.808 INFO  tests.TestBase -- Assert check is Alert present with error text 'Wrong email or password
+19:16:49.810 INFO  tests.TestBase -- Name of method-->loginWrongPassword
+19:16:54.813 INFO  tests.TestBase -- Test data ---> email: 'dusm6@gmail.com' & password 'Tt12$'
+19:16:55.625 INFO  tests.TestBase -- Name of method-->loginWrongUnregisteredUser

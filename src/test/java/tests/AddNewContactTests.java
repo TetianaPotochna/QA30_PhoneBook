@@ -30,7 +30,7 @@ public class AddNewContactTests extends TestBase {
                 .build();
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
-        app.getHelperContact().getScreen("src/test/ScreenShots/screen.png");
+        app.getHelperContact().getScreen("src/test/ScreenShots/screen-"+i+".png");
 //app.getHelperContact().pause(15000);
         app.getHelperContact().saveContact();
 
